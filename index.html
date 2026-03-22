@@ -460,21 +460,21 @@ button { font-family: inherit; }
 <!-- ═══ 동의 팝업 Modal ═══ -->
 <div id="consent-modal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(11,37,64,.85); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
   <div style="background:#fff; border-radius:24px; padding:28px 24px; max-width:500px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,.3);">
-    <div style="font-size:20px; font-weight:900; color:var(--navy); margin-bottom:6px;">📋 안내 사항 확인</div>
-    <div style="font-size:13px; color:var(--muted); margin-bottom:20px; line-height:1.7;">상담을 시작하기 전에 아래 내용을 확인해주세요.</div>
+    <div style="font-size:18px; font-weight:900; color:var(--navy); margin-bottom:6px;">📋 가입 전 필수 확인</div>
+    <div style="font-size:13px; color:var(--muted); margin-bottom:18px; line-height:1.7;">상담 전 아래 3가지 사항을 꼭 확인해 주세요.</div>
 
-    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:22px;">
       <label style="display:flex; gap:12px; align-items:flex-start; cursor:pointer; background:#f8fbff; border:1.5px solid var(--border); border-radius:12px; padding:14px;">
         <input type="checkbox" id="c1" style="width:18px; height:18px; margin-top:2px; accent-color:var(--ocean); flex-shrink:0;">
-        <span style="font-size:13px; color:var(--navy); line-height:1.6;"><strong>여행사가 아닌 직구 가이드 서비스</strong>임을 이해했습니다. 본 페이지는 크루즈 예약 대행이 아닌, 글로벌 여행 적립 시스템 안내 목적입니다.</span>
+        <span style="font-size:13px; color:var(--navy); line-height:1.65;"><strong>환불 정책 확인</strong><br>가입 후 환불은 <span style="color:#c0392b; font-weight:700;">14일 이내</span>에만 가능합니다. 이후 구독료는 환불되지 않고 규정에 따라 진행됩니다.</span>
       </label>
       <label style="display:flex; gap:12px; align-items:flex-start; cursor:pointer; background:#f8fbff; border:1.5px solid var(--border); border-radius:12px; padding:14px;">
         <input type="checkbox" id="c2" style="width:18px; height:18px; margin-top:2px; accent-color:var(--ocean); flex-shrink:0;">
-        <span style="font-size:13px; color:var(--navy); line-height:1.6;"><strong>모든 금액은 US 달러(USD) 기준</strong>이며, 환율에 따라 원화 금액이 변동될 수 있음을 확인했습니다.</span>
+        <span style="font-size:13px; color:var(--navy); line-height:1.65;"><strong>영문 가입 확인</strong><br><span style="color:var(--ocean); font-weight:700;">여권 이름과 동일한 영문</span>으로 가입해 주세요. 한글 입력 시 예약에 문제가 생길 수 있습니다.</span>
       </label>
       <label style="display:flex; gap:12px; align-items:flex-start; cursor:pointer; background:#f8fbff; border:1.5px solid var(--border); border-radius:12px; padding:14px;">
         <input type="checkbox" id="c3" style="width:18px; height:18px; margin-top:2px; accent-color:var(--ocean); flex-shrink:0;">
-        <span style="font-size:13px; color:var(--navy); line-height:1.6;"><strong>크루즈 예약은 본인 책임</strong> 하에 진행되며, 어드바이저는 최적의 플랜 설계를 도와드리는 역할임을 이해했습니다.</span>
+        <span style="font-size:13px; color:var(--navy); line-height:1.65;"><strong>자동결제 설정 확인</strong><br>가입 후 <span style="color:#c0392b; font-weight:700;">신용카드 자동결제</span>를 꼭 설정해 주세요. 결제가 중단되면 리워드 적립이 멈춥니다.</span>
       </label>
     </div>
 
@@ -674,6 +674,9 @@ button { font-family: inherit; }
 <!-- ══════════════════════════════
   4. 멤버십이란?
 ══════════════════════════════ -->
+
+</div><!-- end sec-review -->
+
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 처음으로 돌아가기</button>
 
 <div class="sec-acc">
@@ -768,77 +771,93 @@ button { font-family: inherit; }
   </div>
 </div>
 
-<!-- 멤버십 플랜 — 넷플릭스처럼 2가지 -->
-<div class="card" style="background:linear-gradient(160deg,#e8f6ff 0%,#f0f9ff 100%); border:1.5px solid #b0d8f0; padding:24px 20px;">
-  <div style="font-size:16px; font-weight:900; color:#0b2540; margin-bottom:4px;">📺 넷플릭스처럼 구독하는 방식</div>
-  <div style="font-size:12px; color:#4a7a9a; margin-bottom:20px;">두 가지 플랜 중 하나를 선택하면 됩니다</div>
+<!-- 멤버십 플랜 — 구독 방식 강조 -->
+<div class="card" style="background:var(--white); border:1px solid var(--border); padding:20px 18px;">
 
-  <!-- 2열 나란히 -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
+  <!-- 구독 서비스 비교 아이콘 -->
+  <div style="font-size:14px; font-weight:900; color:var(--navy); margin-bottom:14px;">📺 익숙한 구독 방식, 크루즈에 적용</div>
 
-    <!-- 클래식 — 파스텔 하늘색 -->
-    <div style="background:linear-gradient(160deg,#a8d8f0 0%,#c2e8f8 100%); border:2px solid #6ab8e0; border-radius:18px; padding:18px 14px; position:relative; overflow:hidden; box-shadow:0 4px 16px rgba(80,160,220,.25);">
-      <div style="position:absolute; right:-10px; bottom:-10px; font-size:54px; opacity:.1;">🚢</div>
-
-      <div style="margin-bottom:10px;">
-        <span style="background:rgba(10,90,140,.2); color:#085a8a; font-size:9px; font-weight:900; padding:3px 10px; border-radius:20px; letter-spacing:1px; border:1px solid rgba(10,90,140,.35);">CLASSIC</span>
+  <div style="display:flex; align-items:stretch; gap:0; background:var(--sky); border-radius:14px; overflow:hidden; margin-bottom:16px;">
+    <!-- 넷플릭스 -->
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:14px 8px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#e50914; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(229,9,20,.25);">
+        <span style="color:#fff; font-size:14px; font-weight:900; letter-spacing:-1px;">N</span>
       </div>
-      <div style="font-size:15px; font-weight:900; color:#083a6a; margin-bottom:14px;">클래식</div>
-
-      <!-- 금액 -->
-      <div style="margin-bottom:12px;">
-        <div style="font-size:clamp(1.4rem, 4vw, 1.9rem); font-weight:900; line-height:1; color:#085a8a; letter-spacing:-1px;">$100</div>
-        <div style="font-size:11px; color:#3a6a8a; margin-top:2px; font-weight:700;">/월</div>
-      </div>
-
-      <div style="background:rgba(8,90,138,.18); border-radius:10px; padding:7px 10px; margin-bottom:12px; border:1px solid rgba(8,90,138,.25);">
-        <div style="font-size:12px; color:#085a8a; font-weight:800;">리워드 $200 적립</div>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:7px;">
-        <div style="font-size:12px; color:#083a6a; font-weight:700; display:flex; gap:6px; align-items:flex-start;"><span style="color:#085a8a; flex-shrink:0;">✓</span>$100 구독료<br>→ $200 적립</div>
-        <div style="font-size:12px; color:#083a6a; font-weight:700; display:flex; gap:6px; align-items:flex-start;"><span style="color:#085a8a; flex-shrink:0;">✓</span>리워드로 예약</div>
-        <div style="font-size:12px; color:#083a6a; font-weight:700; display:flex; gap:6px; align-items:flex-start;"><span style="color:#085a8a; flex-shrink:0;">✓</span>부담 없이 시작</div>
-      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:2px;">넷플릭스</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center;">월 구독료<br>→ 영상 시청</div>
     </div>
-
-    <!-- 프리미엄 — 파스텔 핑크 -->
-    <div style="background:linear-gradient(160deg,#f8b8d0 0%,#fdd0e0 100%); border:2px solid #e880a8; border-radius:18px; padding:18px 14px; position:relative; overflow:hidden; box-shadow:0 4px 16px rgba(210,80,130,.25);">
-      <div style="position:absolute; right:-10px; bottom:-10px; font-size:54px; opacity:.1;">⭐</div>
-
-      <!-- 추천 뱃지 -->
-      <div style="position:absolute; top:0; right:0; background:linear-gradient(135deg,#c0185a,#e8407a); color:#fff; font-size:9px; font-weight:900; padding:5px 12px; border-radius:0 18px 0 12px; letter-spacing:.5px;">✦ 추천</div>
-
-      <div style="margin-bottom:10px;">
-        <span style="background:rgba(180,40,90,.2); color:#a02050; font-size:9px; font-weight:900; padding:3px 10px; border-radius:20px; letter-spacing:1px; border:1px solid rgba(180,40,90,.35);">PREMIUM</span>
+    <!-- 쿠팡 -->
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:14px 8px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#1fc0e0; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(31,192,224,.25);">
+        <span style="color:#fff; font-size:13px; font-weight:900;">로</span>
       </div>
-      <div style="font-size:15px; font-weight:900; color:#6a1030; margin-bottom:14px;">프리미엄</div>
-
-      <!-- 금액 -->
-      <div style="margin-bottom:12px;">
-        <div style="font-size:clamp(1.4rem, 4vw, 1.9rem); font-weight:900; line-height:1; color:#a02050; letter-spacing:-1px;">$250</div>
-        <div style="font-size:11px; color:#803050; margin-top:2px; font-weight:700;">/월</div>
-      </div>
-
-      <div style="background:rgba(180,40,90,.18); border-radius:10px; padding:7px 10px; margin-bottom:12px; border:1px solid rgba(180,40,90,.25);">
-        <div style="font-size:12px; color:#a02050; font-weight:800;">리워드 $500 적립</div>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:7px;">
-        <div style="font-size:12px; color:#6a1030; font-weight:700; display:flex; gap:6px; align-items:flex-start;"><span style="color:#a02050; flex-shrink:0;">✓</span>$250 구독료<br>→ $500 적립</div>
-        <div style="font-size:12px; color:#6a1030; font-weight:700; display:flex; gap:6px; align-items:flex-start;"><span style="color:#a02050; flex-shrink:0;">✓</span>빠른 적립 속도</div>
-        <div style="font-size:12px; color:#6a1030; font-weight:700; display:flex; gap:6px; align-items:flex-start;"><span style="color:#a02050; flex-shrink:0;">✓</span>다양한 상품 활용</div>
-      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:2px;">쿠팡 로켓</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center;">월 구독료<br>→ 무료배송</div>
     </div>
-
+    <!-- 유튜브 -->
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:14px 8px; border-right:1px solid var(--border2);">
+      <div style="width:36px; height:36px; background:#ff0000; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(255,0,0,.25);">
+        <span style="color:#fff; font-size:16px;">▶</span>
+      </div>
+      <div style="font-size:11px; font-weight:700; color:var(--text); margin-bottom:2px;">유튜브 프리미엄</div>
+      <div style="font-size:10px; color:var(--muted); text-align:center;">월 구독료<br>→ 광고 없음</div>
+    </div>
+    <!-- inCruises -->
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:14px 8px; background:linear-gradient(160deg,#e8f3fc,#ddeef8);">
+      <div style="width:36px; height:36px; background:var(--ocean); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; box-shadow:0 2px 8px rgba(26,111,168,.3);">
+        <span style="color:#fff; font-size:18px;">🚢</span>
+      </div>
+      <div style="font-size:11px; font-weight:900; color:var(--ocean); margin-bottom:2px;">inCruises</div>
+      <div style="font-size:10px; color:var(--ocean); text-align:center; font-weight:700;">월 구독료<br>→ 리워드 2배 ✦</div>
+    </div>
   </div>
 
-  <!-- 공통 안내 — 연두색 배너 -->
-  <div style="background:linear-gradient(135deg,#a8e890 0%,#c8f5a8 100%); border:2px solid #6ac850; border-radius:14px; padding:16px 18px; font-size:15.6px; color:#1a4010; line-height:1.9; text-align:center; font-weight:800; box-shadow:0 4px 16px rgba(80,180,50,.25);">
-    💡 두 플랜 모두 구독료의 <strong style="color:#e53935;">2배 리워드</strong>가 적립됩니다
+  <!-- 유통 마진 단축 시각화 -->
+  <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:10px;">💸 유통 마진을 없애 리워드로 돌려줍니다</div>
+  <div style="background:var(--sky); border-radius:12px; padding:14px 12px; margin-bottom:14px;">
+    <!-- 일반 여행사 -->
+    <div style="margin-bottom:10px;">
+      <div style="font-size:10px; font-weight:700; color:var(--muted); margin-bottom:6px;">❌ 기존 여행사</div>
+      <div style="display:flex; align-items:center; gap:0; height:36px;">
+        <div style="flex:2; background:#0a6e9e; border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:10px; font-weight:900; color:#fff;">선사 🚢</span>
+        </div>
+        <div style="width:0; height:0; border-top:18px solid transparent; border-bottom:18px solid transparent; border-left:10px solid #0a6e9e;"></div>
+        <div style="flex:2; background:#8b4513; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:9px; font-weight:900; color:#fff;">여행사 마진↑</span>
+        </div>
+        <div style="width:0; height:0; border-top:18px solid transparent; border-bottom:18px solid transparent; border-left:10px solid #8b4513;"></div>
+        <div style="flex:2; background:#555; border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:10px; font-weight:900; color:#fff;">소비자 😔</span>
+        </div>
+      </div>
+    </div>
+    <!-- inCruises -->
+    <div>
+      <div style="font-size:10px; font-weight:700; color:var(--green); margin-bottom:6px;">✅ inCruises 직구</div>
+      <div style="display:flex; align-items:center; gap:0; height:36px;">
+        <div style="flex:2; background:#0a6e9e; border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:10px; font-weight:900; color:#fff;">선사 🚢</span>
+        </div>
+        <div style="width:0; height:0; border-top:18px solid transparent; border-bottom:18px solid transparent; border-left:10px solid #0a6e9e;"></div>
+        <div style="flex:1.5; background:#1a7a4a; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1px;">
+          <span style="font-size:8px; font-weight:900; color:#fff;">플랫폼</span>
+          <span style="font-size:7px; color:#a8ffd8;">마진→리워드</span>
+        </div>
+        <div style="width:0; height:0; border-top:18px solid transparent; border-bottom:18px solid transparent; border-left:10px solid #1a7a4a;"></div>
+        <div style="flex:2; background:linear-gradient(135deg,#0a6e9e,#1a7a4a); border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1px;">
+          <span style="font-size:10px; font-weight:900; color:#fff;">소비자 😊</span>
+          <span style="font-size:7px; color:#a8f0ff;">리워드 2배!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 공통 안내 -->
+  <div style="background:linear-gradient(135deg,#e8f3fc,#ddeef8); border:1.5px solid var(--border2); border-radius:12px; padding:13px 16px; text-align:center; font-size:13px; font-weight:800; color:var(--navy); line-height:1.7;">
+    💡 두 플랜 모두 구독료의 <strong style="color:#c0392b;">2배 리워드</strong>가 적립됩니다
   </div>
 </div>
-
 
 </div><!-- end sec4 -->
 
@@ -1056,119 +1075,117 @@ button { font-family: inherit; }
 </div>
 
 <!-- 리워드 시뮬레이터 -->
-<div class="card" style="border:2px solid var(--ocean);">
-  <div style="font-size:16px; font-weight:900; color:var(--navy); margin-bottom:4px;">🧮 리워드 예약 시뮬레이터</div>
-  <div style="font-size:13px; color:var(--muted); margin-bottom:18px; line-height:1.7;">객실가와 내 리워드를 입력하면<br>얼마나 활용할 수 있는지 바로 계산해드려요</div>
+<div class="card" style="border:2px solid var(--ocean); padding:18px 16px;">
+  <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;">🧮 리워드 예약 시뮬레이터</div>
+  <div style="font-size:12px; color:var(--muted); margin-bottom:16px; line-height:1.6;">객실가와 내 리워드를 입력하면 바로 계산해드려요</div>
 
-  <!-- 입력 2개 -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px;">
-    <div style="background:var(--sky); border-radius:var(--rs); padding:14px;">
-      <label style="font-size:11px; font-weight:700; color:var(--muted); display:block; margin-bottom:8px;">🛳️ 크루즈 객실가</label>
-      <div style="display:flex; align-items:center; gap:4px;">
-        <span style="font-size:13px; font-weight:700; color:var(--navy);">$</span>
-        <input id="sim_room" type="number" value="1800" min="0" oninput="simCalc()"
-          style="flex:1; min-width:0; font-size:18px; font-weight:900; color:var(--ocean); border:2px solid var(--ocean); border-radius:8px; padding:6px 8px; text-align:center; background:#fff; outline:none; -webkit-appearance:none;">
+  <!-- 입력 2개 — 세로 스택으로 모바일 대응 -->
+  <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+    <!-- 객실가 -->
+    <div style="background:var(--sky); border-radius:10px; padding:13px 14px;">
+      <label style="font-size:11px; font-weight:700; color:var(--muted); display:block; margin-bottom:8px;">🛳️ 크루즈 객실가 (수수료 포함 기준)</label>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span style="font-size:16px; font-weight:800; color:var(--navy);">$</span>
+        <input id="sim_room" type="number" inputmode="numeric" value="1800" min="0" oninput="simCalc()"
+          style="flex:1; min-width:0; font-size:20px; font-weight:900; color:var(--ocean); border:2px solid var(--ocean); border-radius:8px; padding:8px 10px; text-align:right; background:#fff; outline:none; -webkit-appearance:none; appearance:none;">
       </div>
-      <div style="font-size:10px; color:var(--muted); margin-top:6px; line-height:1.5;">수수료 포함 최종 결제금액 기준으로<br>넉넉하게 입력하세요</div>
     </div>
-    <div style="background:var(--sky); border-radius:var(--rs); padding:14px;">
-      <label style="font-size:11px; font-weight:700; color:var(--muted); display:block; margin-bottom:8px;">✨ 내 리워드 (RP)</label>
-      <div style="position:relative;">
-        <input id="sim_rp" type="number" value="2800" min="0" oninput="simCalc()"
-          style="width:100%; font-size:18px; font-weight:900; color:var(--gold-dark); border:2px solid var(--gold); border-radius:8px; padding:6px 40px 6px 8px; text-align:center; background:#fff; outline:none; -webkit-appearance:none; box-sizing:border-box;">
-        <span style="position:absolute; right:10px; top:50%; transform:translateY(-50%); font-size:11px; font-weight:700; color:var(--gold-dark); pointer-events:none;">RP</span>
-      </div>
-      <div style="font-size:10px; color:var(--muted); margin-top:6px; line-height:1.5;">앱에서 확인한<br>내 리워드 포인트</div>
-    </div>
-  </div>
-
-  <!-- STEP 1: 최대 리워드 할인 -->
-  <div style="background:#f0faff; border:1.5px solid #b0d8f0; border-radius:14px; padding:16px; margin-bottom:10px;">
-    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-      <span style="background:var(--ocean); color:#fff; font-size:11px; font-weight:900; padding:4px 12px; border-radius:20px;">STEP 1</span>
-      <span style="font-size:14px; font-weight:900; color:var(--ocean);">최대 리워드 할인</span>
-      <span style="background:linear-gradient(135deg,#FFD700,#FFA500); color:#0b2540; font-size:11px; font-weight:900; padding:3px 10px; border-radius:20px; margin-left:4px; white-space:nowrap;">1 RP = $1</span>
-    </div>
-    <div style="font-size:12px; color:var(--muted); margin-bottom:10px; line-height:1.7;">
-      리워드 사용 한도는 <strong style="color:var(--navy);">객실가의 최대 50%</strong>예요.<br>
-      어떤 객실을 선택하느냐에 따라 사용 가능한 리워드가 달라집니다.
-    </div>
-    <div style="background:var(--sky); border-radius:10px; padding:14px;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        <span style="font-size:13px; color:var(--muted);">객실가</span>
-        <span style="font-size:15px; font-weight:900; color:var(--navy);" id="sim_room_disp">$1,800</span>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        <span style="font-size:13px; color:var(--muted);">최대 리워드 사용 가능액 (50%)</span>
-        <span style="font-size:15px; font-weight:900; color:var(--ocean);" id="sim_max_reward">$900</span>
-      </div>
-      <div style="height:1px; background:var(--border); margin:8px 0;"></div>
-      <div id="sim_rp_status" style="font-size:12px; text-align:center; font-weight:700; padding:8px; border-radius:8px; background:var(--green-light); color:var(--green);">
-        ✅ 리워드 충분 — 최대 할인 적용 가능
+    <!-- 내 리워드 -->
+    <div style="background:#fdf9e8; border-radius:10px; padding:13px 14px;">
+      <label style="font-size:11px; font-weight:700; color:var(--muted); display:block; margin-bottom:8px;">✨ 내 리워드 포인트 (앱에서 확인)</label>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <input id="sim_rp" type="number" inputmode="numeric" value="2800" min="0" oninput="simCalc()"
+          style="flex:1; min-width:0; font-size:20px; font-weight:900; color:#8a6000; border:2px solid var(--gold); border-radius:8px; padding:8px 10px; text-align:right; background:#fff; outline:none; -webkit-appearance:none; appearance:none;">
+        <span style="font-size:14px; font-weight:800; color:#8a6000; flex-shrink:0;">RP</span>
       </div>
     </div>
   </div>
 
-  <!-- STEP 2: 나머지 결제 선택 -->
-  <div style="background:#f0fff4; border:1.5px solid #86efac; border-radius:14px; padding:16px; margin-bottom:10px;">
-    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-      <span style="background:var(--green); color:#fff; font-size:11px; font-weight:900; padding:4px 12px; border-radius:20px;">STEP 2</span>
-      <span style="font-size:14px; font-weight:900; color:var(--green);">나머지 결제 방법 선택</span>
+  <!-- STEP 1 -->
+  <div style="background:#f0f8ff; border:1.5px solid #b8d8f0; border-radius:12px; padding:14px; margin-bottom:10px;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;">
+      <span style="background:var(--ocean); color:#fff; font-size:11px; font-weight:900; padding:3px 11px; border-radius:20px; flex-shrink:0;">STEP 1</span>
+      <span style="font-size:13px; font-weight:900; color:var(--ocean);">최대 리워드 할인</span>
+      <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; flex-shrink:0;">1 RP = $1</span>
+    </div>
+    <div style="font-size:12px; color:var(--muted); margin-bottom:10px; line-height:1.6;">
+      리워드 달러 차감 한도는 <strong style="color:var(--navy);">객실가의 최대 50%</strong>
+    </div>
+    <div style="background:var(--white); border-radius:8px; padding:12px; border:1px solid var(--border);">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:12px; color:var(--muted);">객실가</span>
+        <span style="font-size:14px; font-weight:900; color:var(--navy);" id="sim_room_disp">$1,800</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:5px 0 0;">
+        <span style="font-size:12px; color:var(--muted);">최대 리워드 사용액 (50%)</span>
+        <span style="font-size:14px; font-weight:900; color:var(--ocean);" id="sim_max_reward">$900</span>
+      </div>
+    </div>
+    <div id="sim_rp_status" style="font-size:12px; text-align:center; font-weight:700; padding:8px; border-radius:8px; background:var(--green-light); color:var(--green); margin-top:10px;">
+      ✅ 리워드 충분 — 최대 할인 적용 가능
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div style="background:#f0fff6; border:1.5px solid #86efac; border-radius:12px; padding:14px; margin-bottom:12px;">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:12px;">
+      <span style="background:var(--green); color:#fff; font-size:11px; font-weight:900; padding:3px 11px; border-radius:20px; flex-shrink:0;">STEP 2</span>
+      <span style="font-size:13px; font-weight:900; color:var(--green);">나머지 결제 방법 선택</span>
     </div>
 
-    <!-- 탭 선택 -->
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:14px;">
+    <!-- 탭 -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;">
       <button id="tab_allrp" onclick="simSelectTab('allrp')"
-        style="padding:10px; border-radius:10px; border:2px solid var(--ocean); background:var(--ocean); color:#fff; font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent;">
-        💎 올 리워드 결제
+        style="padding:10px 8px; border-radius:10px; border:2px solid var(--ocean); background:var(--ocean); color:#fff; font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent; word-break:keep-all;">
+        💎 올 리워드
       </button>
       <button id="tab_card" onclick="simSelectTab('card')"
-        style="padding:10px; border-radius:10px; border:2px solid var(--border); background:#fff; color:var(--muted); font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent;">
+        style="padding:10px 8px; border-radius:10px; border:2px solid var(--border); background:#fff; color:var(--muted); font-size:12px; font-weight:900; cursor:pointer; -webkit-tap-highlight-color:transparent; word-break:keep-all;">
         💳 카드 결제
       </button>
     </div>
 
-    <!-- 올 리워드 결제 결과 -->
+    <!-- 올 리워드 결과 -->
     <div id="result_allrp">
-      <div style="background:rgba(10,110,158,.06); border-radius:10px; padding:14px; margin-bottom:10px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; font-size:13px; padding:6px 0; border-bottom:1px dashed #86efac;">
-          <span style="color:#1a5c38;">① 리워드 달러 차감 (50%) <span style="background:#FFD700; color:#0b2540; font-size:10px; font-weight:900; padding:1px 7px; border-radius:10px; margin-left:4px;">1 RP = $1</span></span>
-          <strong id="sim_step1_rp">900 RP 사용</strong>
+      <div style="background:rgba(22,100,74,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <span style="font-size:12px; color:#1a5c38; flex:1; line-height:1.5;">① 리워드 달러 차감 (50%)<br><span style="background:#fff3c0; color:#8a6000; font-size:9px; font-weight:900; padding:1px 6px; border-radius:8px; border:1px solid #e8d060;">1 RP = $1</span></span>
+          <strong id="sim_step1_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
         </div>
-        <div style="display:flex; justify-content:space-between; align-items:center; font-size:13px; padding:6px 0; border-bottom:1px dashed #86efac;">
-          <span style="color:#1a5c38;">② 나머지 올 리워드 결제 <span style="background:#0a6e9e; color:#fff; font-size:10px; font-weight:900; padding:1px 7px; border-radius:10px; margin-left:4px;">2 RP = $1</span></span>
-          <strong id="sim_step2_rp">1,800 RP 필요</strong>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <span style="font-size:12px; color:#1a5c38; flex:1; line-height:1.5;">② 나머지 올 리워드 결제<br><span style="background:#e8f3fc; color:var(--ocean); font-size:9px; font-weight:900; padding:1px 6px; border-radius:8px; border:1px solid #b8d8f0;">2 RP = $1</span></span>
+          <strong id="sim_step2_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">1,800 RP</strong>
         </div>
-        <div style="display:flex; justify-content:space-between; font-size:13px; padding:6px 0;">
-          <span style="color:#1a5c38;">총 필요 리워드</span>
-          <strong id="sim_total_rp" style="color:var(--ocean);">2,700 RP</strong>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
+          <span style="font-size:12px; color:#1a5c38; font-weight:700;">총 필요 리워드</span>
+          <strong id="sim_total_rp" style="font-size:14px; color:var(--ocean);">2,700 RP</strong>
         </div>
       </div>
-      <div id="sim_allrp_result" style="background:var(--green-light); border-radius:10px; padding:12px 14px; text-align:center; font-size:13px; font-weight:700; color:var(--green);">
+      <div id="sim_allrp_result" style="background:var(--green-light); border-radius:8px; padding:10px 12px; text-align:center; font-size:13px; font-weight:700; color:var(--green);">
         ✅ 내 리워드로 전액 결제 가능!
       </div>
     </div>
 
     <!-- 카드 결제 결과 -->
     <div id="result_card" style="display:none;">
-      <div style="background:rgba(10,110,158,.06); border-radius:10px; padding:14px; margin-bottom:10px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; font-size:13px; padding:6px 0; border-bottom:1px dashed #86efac;">
-          <span style="color:#1a5c38;">① 리워드로 결제 (50%) <span style="background:#FFD700; color:#0b2540; font-size:10px; font-weight:900; padding:1px 7px; border-radius:10px; margin-left:4px;">1 RP = $1</span></span>
-          <strong id="sim_card_rp">900 RP 사용</strong>
+      <div style="background:rgba(10,110,158,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <span style="font-size:12px; color:#1a5c38; flex:1; line-height:1.5;">① 리워드로 결제 (50%)<br><span style="background:#fff3c0; color:#8a6000; font-size:9px; font-weight:900; padding:1px 6px; border-radius:8px; border:1px solid #e8d060;">1 RP = $1</span></span>
+          <strong id="sim_card_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
         </div>
-        <div style="display:flex; justify-content:space-between; font-size:13px; padding:6px 0;">
-          <span style="color:#1a5c38;">② 카드로 결제</span>
-          <strong id="sim_card_pay" style="color:var(--ocean);">$900</strong>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
+          <span style="font-size:12px; color:#1a5c38;">② 카드로 결제</span>
+          <strong id="sim_card_pay" style="font-size:13px; color:var(--ocean);">$900</strong>
         </div>
       </div>
-      <div id="sim_card_result" style="background:#f0faff; border-radius:10px; padding:12px 14px; text-align:center; font-size:13px; font-weight:700; color:var(--ocean);">
+      <div id="sim_card_result" style="background:#f0f8ff; border-radius:8px; padding:10px 12px; text-align:center; font-size:13px; font-weight:700; color:var(--ocean);">
         💳 카드 결제금액: <span id="sim_card_pay2">$900</span>
       </div>
     </div>
   </div>
 
-  <div style="font-size:11px; color:#b0c8d8; text-align:center; line-height:1.7;">
-    ※ 실제 결제 시 수수료가 포함된 최종 금액 기준으로<br>리워드를 넉넉하게 준비하는 것을 권장합니다
+  <div style="font-size:11px; color:var(--muted2); text-align:center; line-height:1.7;">
+    ※ 실제 결제 시 수수료 포함 최종 금액 기준으로<br>리워드를 넉넉하게 준비하는 것을 권장합니다
   </div>
 </div>
 
@@ -1280,6 +1297,9 @@ function simCalc() {
 <!-- ══════════════════════════════
   7. 예약 방법 상세 — 2가지
 ══════════════════════════════ -->
+
+</div><!-- end sec-review -->
+
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 처음으로 돌아가기</button>
 
 <div class="sec-acc">
@@ -1492,14 +1512,30 @@ function simCalc() {
     <div style="margin-top:10px; font-size:10px; color:#3a9a5a; border-top:1px solid #86efac; padding-top:10px;">※ 이해를 돕기 위한 예상 플랜입니다. 실제 조건은 플랫폼 정책에 따라 다를 수 있습니다.</div>
   </div>
 
-  <!-- 실제 후기 구분선 -->
-  <div style="display:flex; align-items:center; gap:12px; margin:24px 0 16px;">
-    <div style="flex:1; height:1.5px; background:linear-gradient(90deg,transparent,#b0d8f0);"></div>
-    <div style="background:var(--ocean); color:#fff; font-size:12px; font-weight:900; padding:6px 16px; border-radius:20px; letter-spacing:1px; white-space:nowrap;">✍️ 직접 다녀온 분들의 생생 후기</div>
-    <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#b0d8f0,transparent);"></div>
+
+</div>
+</div><!-- end sec8 -->
+
+<!-- ══════════════════════════════
+  실제 예약 후기
+══════════════════════════════ -->
+<div class="sec-acc">
+  <button class="sec-btn" onclick="toggleSec('sec-review')">
+    <div class="n">✍️</div>
+    <span style="font-size:14px; font-weight:800; letter-spacing:1px; color:var(--ocean); flex:1;">실제 예약 후기</span>
+    <span style="font-size:11px; font-weight:700; color:var(--muted); margin-right:6px; white-space:nowrap;">★★★★★</span>
+    <span id="ic-sec-review" style="font-size:18px; color:var(--ocean); transition:transform .3s;">▼</span>
+  </button>
+</div>
+<div id="sec-review" style="display:none;">
+<div class="card" style="padding:16px 14px;">
+
+  <div style="font-size:12px; color:var(--muted); margin-bottom:14px; line-height:1.6; text-align:center;">
+    직접 크루즈를 다녀온 멤버들의 생생한 블로그 후기입니다<br>
+    <span style="color:var(--ocean); font-weight:700;">후기는 계속 추가됩니다 🛳️</span>
   </div>
 
-  <!-- 후기 카드 1 -->
+  <!-- 후기 카드 1
   <a href="https://blog.naver.com/princess_pioneer/223786057702" target="_blank"
     style="display:block; text-decoration:none; margin-bottom:16px; border-radius:18px; overflow:hidden; box-shadow:0 6px 24px rgba(10,110,158,.13); border:1.5px solid #b0d8f0;">
     <div style="position:relative; overflow:hidden; height:200px;">
@@ -1514,6 +1550,7 @@ function simCalc() {
       <div style="background:var(--ocean); color:#fff; font-size:11px; font-weight:700; padding:5px 14px; border-radius:20px;">후기 읽기 →</div>
     </div>
   </a>
+
 
   <!-- 후기 카드 2 -->
   <a href="https://blog.naver.com/bigheart2030/223637260541" target="_blank"
@@ -1531,6 +1568,7 @@ function simCalc() {
     </div>
   </a>
 
+
   <!-- 후기 카드 3 -->
   <a href="https://blog.naver.com/lifepilots66/224065532404" target="_blank"
     style="display:block; text-decoration:none; margin-bottom:8px; border-radius:18px; overflow:hidden; box-shadow:0 6px 24px rgba(22,163,74,.12); border:1.5px solid #86efac;">
@@ -1547,11 +1585,14 @@ function simCalc() {
     </div>
   </a>
 
-</div><!-- end sec8 -->
+
 
 <!-- ══════════════════════════════
   9. 얼마나 유리할까?
 ══════════════════════════════ -->
+
+</div><!-- end sec-review -->
+
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 처음으로 돌아가기</button>
 
 <div class="sec-acc">
@@ -1725,6 +1766,9 @@ function simCalc() {
 <!-- ══════════════════════════════
   11. 가입 방법
 ══════════════════════════════ -->
+
+</div><!-- end sec-review -->
+
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 처음으로 돌아가기</button>
 
 <div class="sec-acc">
@@ -1787,7 +1831,7 @@ function simCalc() {
       </div>
 
       <!-- 가입 버튼 -->
-      <a id="btn-acc-join" href="https://open.kakao.com/o/sbJudavg" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#f5a623,#f0c040); color:var(--navy); text-decoration:none; font-size:14px; font-weight:900; padding:14px; border-radius:12px;">💬 카카오 오픈채팅으로 상담하기</a>
+      <a id="btn-acc-join" href="#" onclick="openConsult(); return false;" style="display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#f5a623,#f0c040); color:var(--navy); text-decoration:none; font-size:14px; font-weight:900; padding:14px; border-radius:12px;">💬 카카오 오픈채팅으로 상담하기</a>
 
       <div style="background:var(--sky); border-radius:10px; padding:12px 14px; font-size:12px; color:#1a4a6e; line-height:1.8;">
         📌 상담 후 가입 링크를 안내해드립니다<br>
@@ -1903,7 +1947,7 @@ function simCalc() {
   <div style="display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.9); font-size:11px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px; margin-bottom:14px;">내 여행 스타일에 맞는지 궁금하다면</div>
   <h2 style="font-size:20px; font-weight:900; color:#fff; margin-bottom:8px; line-height:1.4; word-break:keep-all;">가볍게 물어봐도 괜찮아요 😊</h2>
   <p style="font-size:13px; color:rgba(255,255,255,.75); margin-bottom:22px; line-height:1.7;">크루즈 멤버십이 나에게 맞는지<br>부담 없이 문의해보세요</p>
-  <a id="btn-main-cta" href="https://open.kakao.com/o/sbJudavg" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; background:linear-gradient(135deg,var(--gold),#ffe566); color:var(--navy); font-size:16px; font-weight:900; padding:17px 28px; border-radius:50px; text-decoration:none; box-shadow:0 6px 24px rgba(240,192,64,.5);">💬 카카오 오픈채팅으로 상담하기 →</a>
+  <a id="btn-main-cta" href="#" onclick="openConsult(); return false;" style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; background:linear-gradient(135deg,var(--gold),#ffe566); color:var(--navy); font-size:16px; font-weight:900; padding:17px 28px; border-radius:50px; text-decoration:none; box-shadow:0 6px 24px rgba(240,192,64,.5);">💬 카카오 오픈채팅으로 상담하기 →</a>
   <div style="margin-top:10px; font-size:11px; color:rgba(255,255,255,.4);">open.kakao.com · 무료 상담</div>
 </div>
 
@@ -1912,7 +1956,7 @@ function simCalc() {
 <div class="sec-acc">
   <button class="sec-btn" onclick="toggleSec('sec-trust')">
     <div class="n">🏆</div>
-      <span style="font-size:14px; font-weight:800; letter-spacing:1.5px; color:var(--ocean); flex:1;">🏆 믿을 수 있는 이유</span>
+      <span style="font-size:14px; font-weight:800; letter-spacing:1.5px; color:var(--ocean); flex:1;">믿을 수 있는 이유</span>
     <span id="ic-sec-trust" style="font-size:18px; color:var(--ocean); transition:transform .3s;">▼</span>
   </button>
 </div>
