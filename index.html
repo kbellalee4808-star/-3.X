@@ -451,103 +451,89 @@ body {
 </div>
 
 <!-- 멤버십 플랜 — 넷플릭스처럼 2가지 -->
-<div class="card" style="background:linear-gradient(160deg,#0b2540 0%,#0d3560 100%); border:none; padding:24px;">
+<div class="card" style="background:linear-gradient(160deg,#0b2540 0%,#112d4e 100%); border:none; padding:24px 20px;">
   <div style="font-size:16px; font-weight:900; color:#fff; margin-bottom:4px;">📺 넷플릭스처럼 구독하는 방식</div>
-  <div style="font-size:13px; color:rgba(255,255,255,.6); margin-bottom:20px;">두 가지 플랜 중 하나를 선택하면 됩니다</div>
+  <div style="font-size:12px; color:rgba(255,255,255,.55); margin-bottom:20px;">두 가지 플랜 중 하나를 선택하면 됩니다</div>
 
-  <div style="display:flex; flex-direction:column; gap:14px;">
+  <!-- 2열 나란히 -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
 
     <!-- 클래식 -->
-    <div style="background:linear-gradient(135deg,#1a3a5c 0%,#1e4570 100%); border:1.5px solid rgba(135,206,235,.3); border-radius:20px; padding:22px; position:relative; overflow:hidden;">
-      <div style="position:absolute; right:-15px; bottom:-15px; font-size:80px; opacity:.06; transform:rotate(-15deg);">🚢</div>
+    <div style="background:rgba(255,255,255,.07); border:1px solid rgba(135,206,235,.2); border-radius:18px; padding:18px 14px; position:relative; overflow:hidden;">
+      <div style="position:absolute; right:-10px; bottom:-10px; font-size:60px; opacity:.05;">🚢</div>
 
-      <!-- 뱃지 + 이름 -->
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
-        <span style="background:linear-gradient(135deg,#64b5d4,#87ceeb); color:#0b2540; font-size:10px; font-weight:900; padding:4px 14px; border-radius:20px; letter-spacing:1px;">CLASSIC</span>
-        <span style="font-size:16px; font-weight:900; color:#fff;">클래식</span>
+      <div style="margin-bottom:10px;">
+        <span style="background:rgba(135,206,235,.2); color:#87CEEB; font-size:9px; font-weight:900; padding:3px 10px; border-radius:20px; letter-spacing:1px; border:1px solid rgba(135,206,235,.3);">CLASSIC</span>
+      </div>
+      <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:14px;">클래식</div>
+
+      <!-- 금액 -->
+      <div style="margin-bottom:12px;">
+        <div style="font-size:2.4rem; font-weight:900; line-height:1; color:#fff; letter-spacing:-1px;">$100</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.5); margin-top:2px;">/월</div>
       </div>
 
-      <!-- 금액 — 크고 형광색으로 -->
-      <div style="margin-bottom:16px;">
-        <div style="display:flex; align-items:flex-end; gap:4px; margin-bottom:4px;">
-          <span style="font-size:3.2rem; font-weight:900; line-height:1; color:#39ff14; text-shadow:0 0 20px rgba(57,255,20,.6), 0 0 40px rgba(57,255,20,.3);">$100</span>
-          <span style="font-size:15px; color:rgba(255,255,255,.6); margin-bottom:8px;">/월</span>
-        </div>
-        <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(57,255,20,.12); border:1px solid rgba(57,255,20,.3); border-radius:20px; padding:4px 12px;">
-          <span style="font-size:12px; color:#39ff14; font-weight:700;">✦ 리워드 $200 적립</span>
-        </div>
+      <div style="background:rgba(135,206,235,.15); border-radius:10px; padding:6px 10px; margin-bottom:12px;">
+        <div style="font-size:11px; color:#87CEEB; font-weight:700;">리워드 $200 적립</div>
       </div>
 
-      <!-- 혜택 리스트 -->
-      <div style="display:flex; flex-direction:column; gap:8px;">
-        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:rgba(255,255,255,.85);">
-          <span style="color:#39ff14; font-size:15px; flex-shrink:0;">✓</span> 매달 $100 납입 → $200 리워드 적립
-        </div>
-        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:rgba(255,255,255,.85);">
-          <span style="color:#39ff14; font-size:15px; flex-shrink:0;">✓</span> 크루즈 예약 리워드 활용 가능
-        </div>
-        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:rgba(255,255,255,.85);">
-          <span style="color:#39ff14; font-size:15px; flex-shrink:0;">✓</span> 부담 없이 시작하는 플랜
-        </div>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div style="font-size:11px; color:rgba(255,255,255,.75); display:flex; gap:6px; align-items:flex-start;"><span style="color:#87CEEB; flex-shrink:0;">✓</span>$100 납입<br>→ $200 적립</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.75); display:flex; gap:6px; align-items:flex-start;"><span style="color:#87CEEB; flex-shrink:0;">✓</span>리워드로 예약</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.75); display:flex; gap:6px; align-items:flex-start;"><span style="color:#87CEEB; flex-shrink:0;">✓</span>부담 없이 시작</div>
       </div>
     </div>
 
     <!-- 프리미엄 -->
-    <div style="background:linear-gradient(135deg,#ff6b2b 0%,#ff4500 40%,#c0392b 100%); border:2px solid rgba(255,220,50,.5); border-radius:20px; padding:22px; position:relative; overflow:hidden; box-shadow:0 8px 32px rgba(255,107,43,.4);">
-      <div style="position:absolute; right:-15px; bottom:-15px; font-size:80px; opacity:.08; transform:rotate(-15deg);">⭐</div>
+    <div style="background:linear-gradient(160deg,rgba(10,110,158,.6) 0%,rgba(10,78,122,.8) 100%); border:1.5px solid rgba(135,206,235,.45); border-radius:18px; padding:18px 14px; position:relative; overflow:hidden; box-shadow:0 4px 24px rgba(10,110,158,.35);">
+      <div style="position:absolute; right:-10px; bottom:-10px; font-size:60px; opacity:.07;">⭐</div>
 
       <!-- 추천 뱃지 -->
-      <div style="position:absolute; top:-1px; right:20px; background:linear-gradient(135deg,#FFD700,#ffe566); color:#0b2540; font-size:11px; font-weight:900; padding:6px 16px; border-radius:0 0 14px 14px; box-shadow:0 4px 12px rgba(255,215,0,.5); letter-spacing:.5px;">🔥 추천</div>
+      <div style="position:absolute; top:0; right:0; background:linear-gradient(135deg,#FFD700,#FFA500); color:#0b2540; font-size:9px; font-weight:900; padding:4px 10px; border-radius:0 18px 0 12px; letter-spacing:.5px;">추천</div>
 
-      <!-- 뱃지 + 이름 -->
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px; padding-right:60px;">
-        <span style="background:rgba(255,255,255,.25); color:#fff; font-size:10px; font-weight:900; padding:4px 14px; border-radius:20px; letter-spacing:1px; border:1px solid rgba(255,255,255,.4);">PREMIUM</span>
-        <span style="font-size:16px; font-weight:900; color:#fff;">프리미엄</span>
+      <div style="margin-bottom:10px;">
+        <span style="background:rgba(255,215,0,.2); color:#FFD700; font-size:9px; font-weight:900; padding:3px 10px; border-radius:20px; letter-spacing:1px; border:1px solid rgba(255,215,0,.35);">PREMIUM</span>
+      </div>
+      <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:14px;">프리미엄</div>
+
+      <!-- 금액 -->
+      <div style="margin-bottom:12px;">
+        <div style="font-size:2.4rem; font-weight:900; line-height:1; color:#FFD700; letter-spacing:-1px;">$250</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.5); margin-top:2px;">/월</div>
       </div>
 
-      <!-- 금액 — 더 크고 강렬하게 -->
-      <div style="margin-bottom:16px;">
-        <div style="display:flex; align-items:flex-end; gap:4px; margin-bottom:4px;">
-          <span style="font-size:3.8rem; font-weight:900; line-height:1; color:#fff700; text-shadow:0 0 24px rgba(255,247,0,.8), 0 0 50px rgba(255,247,0,.4);">$250</span>
-          <span style="font-size:15px; color:rgba(255,255,255,.7); margin-bottom:10px;">/월</span>
-        </div>
-        <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,247,0,.2); border:1px solid rgba(255,247,0,.5); border-radius:20px; padding:4px 12px;">
-          <span style="font-size:12px; color:#fff700; font-weight:700;">✦ 리워드 $500 적립</span>
-        </div>
+      <div style="background:rgba(255,215,0,.15); border-radius:10px; padding:6px 10px; margin-bottom:12px;">
+        <div style="font-size:11px; color:#FFD700; font-weight:700;">리워드 $500 적립</div>
       </div>
 
-      <!-- 혜택 리스트 -->
-      <div style="display:flex; flex-direction:column; gap:8px;">
-        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#fff;">
-          <span style="color:#fff700; font-size:15px; flex-shrink:0;">✓</span> 매달 $250 납입 → $500 리워드 적립
-        </div>
-        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#fff;">
-          <span style="color:#fff700; font-size:15px; flex-shrink:0;">✓</span> 더 빠르게 리워드 적립
-        </div>
-        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#fff;">
-          <span style="color:#fff700; font-size:15px; flex-shrink:0;">✓</span> 더 다양한 크루즈 상품 활용 가능
-        </div>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div style="font-size:11px; color:rgba(255,255,255,.75); display:flex; gap:6px; align-items:flex-start;"><span style="color:#FFD700; flex-shrink:0;">✓</span>$250 납입<br>→ $500 적립</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.75); display:flex; gap:6px; align-items:flex-start;"><span style="color:#FFD700; flex-shrink:0;">✓</span>빠른 적립 속도</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.75); display:flex; gap:6px; align-items:flex-start;"><span style="color:#FFD700; flex-shrink:0;">✓</span>다양한 상품 활용</div>
       </div>
     </div>
 
   </div>
 
-
+  <!-- 공통 안내 -->
+  <div style="background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:14px 16px; font-size:12px; color:rgba(255,255,255,.75); line-height:1.9; text-align:center;">
+    💡 두 플랜 모두 <strong style="color:#87CEEB;">납입금의 2배 리워드</strong>가 적립됩니다
+  </div>
 </div>
 
 <!-- 2배 리워드 강조 배너 -->
-<div style="background:linear-gradient(135deg,#39ff14 0%,#00e676 100%); border-radius:24px; padding:28px 24px; text-align:center; margin-top:4px; box-shadow:0 8px 40px rgba(57,255,20,.35), 0 0 0 1px rgba(57,255,20,.2);">
-  <div style="font-size:13px; font-weight:800; color:#0b2540; letter-spacing:2px; margin-bottom:10px; opacity:.8;">✦ 클래식 · 프리미엄 공통 혜택 ✦</div>
-  <div style="font-size:2.2rem; font-weight:900; color:#0b2540; line-height:1.2; margin-bottom:10px;">
-    납입금의 <span style="font-size:3rem; position:relative; display:inline-block;">2배<span style="position:absolute; top:-10px; right:-18px; font-size:14px; background:#0b2540; color:#39ff14; padding:2px 7px; border-radius:10px; font-weight:900;">×2</span></span> 리워드
+<div style="background:linear-gradient(135deg,#0a4a7a 0%,#0b2540 100%); border:1.5px solid rgba(135,206,235,.3); border-radius:24px; padding:26px 22px; text-align:center; margin-top:4px; box-shadow:0 8px 32px rgba(10,37,64,.4);">
+  <div style="font-size:11px; font-weight:800; color:#87CEEB; letter-spacing:2.5px; margin-bottom:12px; opacity:.85;">✦ 클래식 · 프리미엄 공통 혜택 ✦</div>
+  <div style="font-size:2rem; font-weight:900; color:#fff; line-height:1.2; margin-bottom:6px;">
+    납입금의 <span style="color:#FFD700; font-size:2.6rem;">2배</span> 리워드
   </div>
-  <div style="font-size:16px; font-weight:700; color:#0b2540; opacity:.85; margin-bottom:18px;">적립됩니다</div>
-  <div style="display:flex; flex-direction:column; gap:8px;">
-    <div style="background:rgba(11,37,64,.1); border-radius:12px; padding:12px 16px; font-size:14px; font-weight:700; color:#0b2540;">
-      🔄 언제든 플랜 변경 가능
+  <div style="font-size:15px; font-weight:600; color:rgba(255,255,255,.7); margin-bottom:20px;">적립됩니다</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div style="background:rgba(255,255,255,.07); border:1px solid rgba(135,206,235,.2); border-radius:12px; padding:12px 10px; font-size:13px; font-weight:700; color:#fff;">
+      🔄 언제든<br><span style="color:#87CEEB;">플랜 변경 가능</span>
     </div>
-    <div style="background:rgba(11,37,64,.1); border-radius:12px; padding:12px 16px; font-size:14px; font-weight:700; color:#0b2540;">
-      ✈️ 여행 후 자유롭게 종료 가능
+    <div style="background:rgba(255,255,255,.07); border:1px solid rgba(135,206,235,.2); border-radius:12px; padding:12px 10px; font-size:13px; font-weight:700; color:#fff;">
+      ✈️ 여행 후<br><span style="color:#87CEEB;">자유롭게 종료</span>
     </div>
   </div>
 </div>
@@ -1588,7 +1574,14 @@ function simCalc() {
 
 
 <!-- ══ 신뢰 섹션 ══ -->
-<div class="sh"><div class="n">🏆</div>믿을 수 있는 이유</div>
+<div class="sec-acc">
+  <button class="sec-btn" onclick="toggleSec('sec-trust')" style="width:100%; display:flex; align-items:center; gap:12px; background:var(--sky); border:1.5px solid var(--border); border-radius:var(--r); cursor:pointer; padding:14px 18px; text-align:left; margin:40px 0 0; box-shadow:var(--shadow);">
+    <div class="n" style="width:30px; height:30px; border-radius:50%; background:var(--ocean); color:#fff; font-size:13px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0;">🏆</div>
+    <span style="font-size:13px; font-weight:700; letter-spacing:2px; color:var(--ocean); text-transform:uppercase; flex:1;">믿을 수 있는 이유</span>
+    <span id="ic-sec-trust" style="font-size:18px; color:var(--ocean); transition:transform .3s;">▼</span>
+  </button>
+</div>
+<div id="sec-trust" style="display:none;">
 
 <div class="card">
   <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:14px;">🌍 10년간 전 세계에서 검증된 여행 멤버십</div>
@@ -1649,6 +1642,8 @@ function simCalc() {
     <span style="font-size:11px; color:#3a9a5a;">누적 기부금 $74만+ · 지속적인 사회공헌 활동</span>
   </div>
 </div>
+
+</div><!-- end sec-trust -->
 
 <!-- 커뮤니티 -->
 <div class="card">
