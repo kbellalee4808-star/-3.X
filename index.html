@@ -1198,7 +1198,9 @@ button { font-family: inherit; }
     <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;">
       <span style="background:var(--ocean); color:#fff; font-size:11px; font-weight:900; padding:3px 11px; border-radius:20px; flex-shrink:0;">STEP 1</span>
       <span style="font-size:13px; font-weight:900; color:var(--ocean);">최대 리워드 할인</span>
-      <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; flex-shrink:0;">1 RP = $1</span>
+    </div>
+    <div style="margin-bottom:10px;">
+      <span style="background:#fff3c0; color:#8a6000; font-size:11px; font-weight:900; padding:4px 12px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1 적용</span>
     </div>
     <div style="font-size:12px; color:var(--muted); margin-bottom:10px; line-height:1.6;">
       리워드 달러 차감 한도는 <strong style="color:var(--navy);">객실가의 최대 50%</strong>
@@ -1240,12 +1242,20 @@ button { font-family: inherit; }
     <!-- 올 리워드 결과 -->
     <div id="result_allrp">
       <div style="background:rgba(22,100,74,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
-          <span style="font-size:12px; color:#1a5c38; flex:1; line-height:1.5;">① 리워드 달러 차감 (50%)<br><span style="background:#fff3c0; color:#8a6000; font-size:9px; font-weight:900; padding:1px 6px; border-radius:8px; border:1px solid #e8d060;">1 RP = $1</span></span>
+        <!-- ① 행 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;">① 리워드 달러 차감 (50%)</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
           <strong id="sim_step1_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
         </div>
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
-          <span style="font-size:12px; color:#1a5c38; flex:1; line-height:1.5;">② 나머지 올 리워드 결제<br><span style="background:#e8f3fc; color:var(--ocean); font-size:9px; font-weight:900; padding:1px 6px; border-radius:8px; border:1px solid #b8d8f0;">2 RP = $1</span></span>
+        <!-- ② 행 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;">② 나머지 올 리워드 결제</div>
+            <span style="background:#e8f3fc; color:var(--ocean); font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #b8d8f0; display:inline-block;">2 RP = $1</span>
+          </div>
           <strong id="sim_step2_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">1,800 RP</strong>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
@@ -1261,8 +1271,12 @@ button { font-family: inherit; }
     <!-- 카드 결제 결과 -->
     <div id="result_card" style="display:none;">
       <div style="background:rgba(10,110,158,.05); border-radius:10px; padding:12px; margin-bottom:8px;">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
-          <span style="font-size:12px; color:#1a5c38; flex:1; line-height:1.5;">① 리워드로 결제 (50%)<br><span style="background:#fff3c0; color:#8a6000; font-size:9px; font-weight:900; padding:1px 6px; border-radius:8px; border:1px solid #e8d060;">1 RP = $1</span></span>
+        <!-- ① 행 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed #86efac;">
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#1a5c38; font-weight:700; margin-bottom:4px;">① 리워드로 결제 (50%)</div>
+            <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block;">1 RP = $1</span>
+          </div>
           <strong id="sim_card_rp" style="font-size:13px; color:var(--navy); flex-shrink:0;">900 RP</strong>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 0;">
@@ -1420,7 +1434,8 @@ function simCalc() {
         <span style="font-size:16px; flex-shrink:0;">1️⃣</span>
         <div style="font-size:13px; color:#1a5a8a; line-height:1.7;">
           총 객실가의 <strong>50%</strong><br>
-          → <strong>리워드 달러</strong>로 차감
+          → <strong>리워드 달러</strong>로 차감<br>
+          <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block; margin-top:4px;">1 RP = $1</span>
         </div>
       </div>
       <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(10,110,158,.07); border-radius:10px;">
@@ -1494,7 +1509,8 @@ function simCalc() {
         <span style="font-size:16px; flex-shrink:0;">1️⃣</span>
         <div style="font-size:13px; color:#1a5c38; line-height:1.7;">
           총 객실가의 <strong>50%</strong><br>
-          → <strong>리워드</strong>로 결제
+          → <strong>리워드</strong>로 결제<br>
+          <span style="background:#fff3c0; color:#8a6000; font-size:10px; font-weight:900; padding:2px 8px; border-radius:20px; border:1px solid #e8d060; display:inline-block; margin-top:4px;">1 RP = $1</span>
         </div>
       </div>
       <div style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:rgba(22,163,74,.08); border-radius:10px;">
