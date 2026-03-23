@@ -53,7 +53,7 @@
 
 /* ─── RESET ─── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
 body {
   background: linear-gradient(160deg, #e8f2fb 0%, #eff7ff 50%, #f5f9fd 100%);
   min-height: 100vh;
@@ -63,15 +63,18 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
+  overflow-x: hidden;
 }
 img { max-width:100%; display:block; }
 button { font-family: inherit; }
 
 /* ─── LAYOUT ─── */
 .wrap {
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
   padding: 0 16px 100px;
+  box-sizing: border-box;
 }
 
 /* ─── STICKY CTA ─── */
@@ -223,7 +226,11 @@ button { font-family: inherit; }
 .acc-body.open { display: block; }
 
 /* ─── 섹션 아코디언 버튼 (sec-btn) ─── */
-.sec-acc { margin-bottom: 2px; }
+.sec-acc {
+  width: 100%;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+}
 .sec-btn {
   width: 100%;
   display: flex;
@@ -234,11 +241,20 @@ button { font-family: inherit; }
   border-radius: var(--r);
   cursor: pointer;
   padding: 16px 18px;
+  min-height: 60px;
   text-align: left;
   margin: 28px 0 0;
   box-shadow: var(--shadow-sm);
   transition: background .15s, border-color .15s;
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  min-width: 0;
+}
+.sec-btn span[style*="flex:1"] {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .sec-btn:active { background: var(--sky); }
 
@@ -385,7 +401,7 @@ button { font-family: inherit; }
   .acc-t { padding: 18px 22px; }
   .acc-body { padding: 0 22px 22px; }
   .acc-title { font-size: 16px; }
-  .sec-btn { padding: 18px 22px; margin: 32px 0 0; }
+  .sec-btn { padding: 18px 22px; margin: 32px 0 0; min-height: 60px; }
   .hero-emoji { font-size: 64px; }
   .sticky a { font-size: 16px; padding: 16px 24px; }
   .tbl-row { padding: 13px 16px; }
@@ -414,7 +430,7 @@ button { font-family: inherit; }
   .acc-body { padding: 0 28px 26px; }
   .acc-ic { width: 46px; height: 46px; border-radius: 14px; }
   .acc-title { font-size: 17px; }
-  .sec-btn { padding: 18px 26px; margin: 36px 0 0; }
+  .sec-btn { padding: 18px 26px; margin: 36px 0 0; min-height: 60px; }
   .hero-emoji { font-size: 76px; }
   .sticky a { font-size: 17px; padding: 17px 28px; max-width: 500px; }
   .tbl-row { padding: 14px 20px; }
@@ -541,9 +557,50 @@ button { font-family: inherit; }
 
 
 <!-- ══════════════════════════════
+  GLOBAL NETWORK 카드
+══════════════════════════════ -->
+<div style="background:var(--white); border:2px solid var(--gold); border-radius:var(--r); padding:24px 20px; text-align:center; box-shadow:var(--shadow-lg); margin-bottom:24px;">
+  <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:10px; letter-spacing:1.5px;">GLOBAL NETWORK</div>
+  <h2 style="font-size:18px; font-weight:900; color:var(--navy); line-height:1.6; margin-bottom:16px; word-break:keep-all;">
+    전 세계 <span style="color:var(--ocean);">200여 개국</span>,<br>
+    <span style="color:var(--ocean);">20만 개 이상</span>의 목적지<br>
+    글로벌 크루즈 직구 플랫폼
+  </h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-bottom:16px;">
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px; text-align:center;">
+      <div style="font-size:22px; margin-bottom:6px;">🌍</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;">200+</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;">개국</div>
+    </div>
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px; text-align:center;">
+      <div style="font-size:22px; margin-bottom:6px;">🗺️</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;">20만+</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;">목적지</div>
+    </div>
+    <div style="background:var(--sky); border:1px solid var(--border); border-radius:12px; padding:14px 8px; text-align:center;">
+      <div style="font-size:22px; margin-bottom:6px;">🛳️</div>
+      <div style="font-size:18px; font-weight:900; color:var(--ocean); line-height:1;">전세계</div>
+      <div style="font-size:10px; color:var(--muted); margin-top:3px; font-weight:700;">크루즈라인</div>
+    </div>
+  </div>
+  <div style="border-radius:12px; overflow:hidden; height:150px;">
+    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&q=80&w=800"
+      alt="글로벌 크루즈 네트워크"
+      style="width:100%; height:100%; object-fit:cover; display:block;">
+  </div>
+</div>
+
+<!-- ══════════════════════════════
   1. 크루즈란?
 ══════════════════════════════ -->
-<div class="sh"><div class="n">1</div>크루즈 여행이 뭔가요?</div>
+<div class="sec-acc">
+  <button class="sec-btn" onclick="toggleSec('sec1')">
+    <div class="n">1</div>
+    <span style="font-size:14px; font-weight:800; letter-spacing:.5px; color:var(--ocean); flex:1;">크루즈 여행이 뭔가요?</span>
+    <span id="ic-sec1" style="font-size:18px; color:var(--ocean); transition:transform .3s;">▼</span>
+  </button>
+</div>
+<div id="sec1" style="display:none; margin-bottom:4px;">
 
 <div class="card" style="word-break:keep-all;">
   <div style="font-size:18px; font-weight:900; color:var(--navy); margin-bottom:6px;">🚢 한 문장으로 설명하면</div>
@@ -613,6 +670,8 @@ button { font-family: inherit; }
     </div>
   </div>
 </div>
+
+</div><!-- end sec1 -->
 
 
 <div class="sec-acc">
@@ -689,7 +748,6 @@ button { font-family: inherit; }
   4. 멤버십이란?
 ══════════════════════════════ -->
 
-</div><!-- end sec-review -->
 
 <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 처음으로 돌아가기</button>
 
