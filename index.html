@@ -528,7 +528,10 @@ button { font-family: inherit; }
 <!-- ══════════════════════════════
   1. 크루즈란?
 ══════════════════════════════ -->
-<div class="sh"><div class="n">1</div>크루즈 여행이 뭔가요?</div>
+<div style="width:100%; display:flex; align-items:center; gap:12px; background:var(--white); border:1.5px solid var(--border2); border-radius:var(--r); padding:16px 18px; margin:28px 0 0; box-shadow:var(--shadow-sm);">
+  <div class="n">1</div>
+  <span style="font-size:14px; font-weight:800; letter-spacing:.5px; color:var(--ocean); flex:1;">크루즈 여행이 뭔가요?</span>
+</div>
 
 <div class="card" style="word-break:keep-all;">
   <div style="font-size:18px; font-weight:900; color:var(--navy); margin-bottom:6px;">🚢 한 문장으로 설명하면</div>
@@ -817,7 +820,7 @@ button { font-family: inherit; }
 
     <!-- 일반 여행사 -->
     <div style="margin-bottom:14px;">
-      <div style="font-size:12px; font-weight:800; color:#c0392b; margin-bottom:8px;">❌ 기존 여행사</div>
+      <div style="font-size:12px; font-weight:800; color:#c0392b; margin-bottom:8px;">❌ 일반 방식</div>
       <div style="display:flex; align-items:stretch; height:48px;">
         <div style="flex:1; background:var(--ocean); border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:center;">
           <span style="font-size:12px; font-weight:900; color:#fff;">🚢 선사</span>
@@ -858,7 +861,6 @@ button { font-family: inherit; }
 
   <!-- 공통 안내 -->
   <div style="background:linear-gradient(135deg,#e8f3fc,#ddeef8); border:1.5px solid var(--border2); border-radius:12px; padding:13px 16px; text-align:center; font-size:13px; font-weight:800; color:var(--navy); line-height:1.7;">
-    💡 두 플랜 모두 구독료의 <strong style="color:#c0392b;">2배 리워드</strong>가 적립됩니다
   </div>
 </div>
 
@@ -887,7 +889,7 @@ button { font-family: inherit; }
       </div>
       <div style="padding-top:4px;">
         <div style="font-size:15px; font-weight:900; color:var(--navy); margin-bottom:4px;">멤버십 시작</div>
-        <div style="font-size:13px; color:var(--muted); line-height:1.7;">매달 여행 예산을 준비합니다<br>
+        <div style="font-size:13px; color:var(--muted); line-height:1.7;">매달 구독을 통해 여행 예산을 미리 준비합니다<br>
           <span style="font-size:12px; display:flex; flex-direction:column; gap:3px; margin-top:4px;">
             <span>💙 월 <strong style="color:#085a8a;">$100</strong> → <strong style="color:#085a8a;">200 RP</strong> 적립</span>
             <span>❤️ 월 <strong style="color:#a02050;">$250</strong> → <strong style="color:#a02050;">500 RP</strong> 적립</span>
@@ -945,21 +947,21 @@ button { font-family: inherit; }
   <!-- 두 플랜 비교 -->
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px;">
     <!-- 클래식 -->
-    <div style="background:linear-gradient(160deg,#e8f4ff,#d0e8ff); border:2px solid #5ba8e0; border-radius:16px; padding:18px 12px; text-align:center;">
-      <div style="font-size:12px; font-weight:900; color:#085a8a; letter-spacing:1.5px; margin-bottom:10px; background:rgba(8,90,138,.1); border-radius:20px; padding:3px 10px; display:inline-block;">CLASSIC</div>
-      <div style="font-size:16px; color:#2a5a8a; margin-bottom:6px; font-weight:700;">구독료 $100</div>
-      <div style="font-size:1rem; font-weight:900; color:#085a8a; margin-bottom:4px;">→</div>
-      <div style="font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; color:#085a8a; line-height:1;">$200</div>
-      <div style="font-size:13px; color:#0a6e9e; font-weight:800; margin-top:6px; background:rgba(8,90,138,.12); border-radius:20px; padding:3px 12px; display:inline-block;">리워드 적립</div>
+    <div style="background:linear-gradient(160deg,#e8f6ff,#d8eeff); border:2px solid #a8d4f0; border-radius:20px; padding:20px 14px; text-align:center; box-shadow:0 4px 16px rgba(100,180,240,.18);">
+      <div style="font-size:11px; font-weight:900; color:#4a8ab0; letter-spacing:2px; margin-bottom:10px; background:#c8e8ff; border-radius:20px; padding:4px 12px; display:inline-block;">CLASSIC</div>
+      <div style="font-size:15px; color:#5a90b8; margin-bottom:10px; font-weight:700;">구독료 $100</div>
+      <div style="font-size:11px; color:#7aaac8; font-weight:700; margin-bottom:8px;">매월 적립</div>
+      <div style="display:inline-block; background:linear-gradient(135deg,#f5c842,#ffe066); color:#7a5000; font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; line-height:1; border-radius:14px; padding:10px 20px; box-shadow:0 4px 14px rgba(245,200,66,.45);">$200</div>
+      <div style="font-size:12px; color:#5a90b8; font-weight:800; margin-top:10px; background:#d8eeff; border-radius:20px; padding:4px 14px; display:inline-block;">리워드 적립</div>
     </div>
     <!-- 프리미엄 -->
-    <div style="background:linear-gradient(160deg,#ffe8f0,#ffd0e0); border:2px solid #e0507a; border-radius:16px; padding:18px 12px; text-align:center; position:relative;">
-      <div style="position:absolute; top:-1px; right:-1px; background:linear-gradient(135deg,#e91e8c,#ff6eb4); color:#fff; font-size:10px; font-weight:900; padding:4px 10px; border-radius:0 16px 0 10px;">추천</div>
-      <div style="font-size:12px; font-weight:900; color:#a02050; letter-spacing:1.5px; margin-bottom:10px; background:rgba(160,32,80,.1); border-radius:20px; padding:3px 10px; display:inline-block;">PREMIUM</div>
-      <div style="font-size:16px; color:#7a1030; margin-bottom:6px; font-weight:700;">구독료 $250</div>
-      <div style="font-size:1rem; font-weight:900; color:#a02050; margin-bottom:4px;">→</div>
-      <div style="font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; color:#a02050; line-height:1;">$500</div>
-      <div style="font-size:13px; color:#c0395a; font-weight:800; margin-top:6px; background:rgba(160,32,80,.12); border-radius:20px; padding:3px 12px; display:inline-block;">리워드 적립</div>
+    <div style="background:linear-gradient(160deg,#fff0f6,#ffe0ee); border:2px solid #f0b0cc; border-radius:20px; padding:20px 14px; text-align:center; position:relative; box-shadow:0 4px 16px rgba(240,140,180,.2);">
+      <div style="position:absolute; top:-1px; right:-1px; background:linear-gradient(135deg,#f06090,#ffaac8); color:#fff; font-size:10px; font-weight:900; padding:4px 10px; border-radius:0 20px 0 10px;">추천</div>
+      <div style="font-size:11px; font-weight:900; color:#c06080; letter-spacing:2px; margin-bottom:10px; background:#ffd8e8; border-radius:20px; padding:4px 12px; display:inline-block;">PREMIUM</div>
+      <div style="font-size:15px; color:#c07090; margin-bottom:10px; font-weight:700;">구독료 $250</div>
+      <div style="font-size:11px; color:#d090a8; font-weight:700; margin-bottom:8px;">매월 적립</div>
+      <div style="display:inline-block; background:linear-gradient(135deg,#f5c842,#ffe066); color:#7a5000; font-size:clamp(1.5rem, 4.5vw, 2rem); font-weight:900; line-height:1; border-radius:14px; padding:10px 20px; box-shadow:0 4px 14px rgba(245,200,66,.45);">$500</div>
+      <div style="font-size:12px; color:#c07090; font-weight:800; margin-top:10px; background:#ffd8e8; border-radius:20px; padding:4px 14px; display:inline-block;">리워드 적립</div>
     </div>
   </div>
 
