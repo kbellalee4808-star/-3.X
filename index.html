@@ -1285,7 +1285,7 @@ button { font-family: inherit; }
         </div>
       </div>
       <div id="sim_card_result" style="background:#f0f8ff; border-radius:8px; padding:10px 12px; text-align:center; font-size:13px; font-weight:700; color:var(--ocean);">
-        💳 카드 결제금액: <span id="sim_card_pay2">$900</span>
+        💳 카드 결제금액: $900
       </div>
     </div>
   </div>
@@ -1381,18 +1381,22 @@ function simCalc() {
   }
 
   // 카드 결제
-  document.getElementById('sim_card_rp').textContent   = fmtRP(usableRP1) + ' 사용';
-  document.getElementById('sim_card_pay').textContent  = fmt(remaining);
-  document.getElementById('sim_card_pay2').textContent = fmt(remaining);
+  var cardRemaining = room - usableRP1;  // 실제 RP 차감 후 카드로 낼 금액
+  document.getElementById('sim_card_rp').textContent  = fmtRP(usableRP1) + ' 사용';
+  document.getElementById('sim_card_pay').textContent = fmt(cardRemaining);  // ② 카드로 결제
   var cardResultEl = document.getElementById('sim_card_result');
+  // 하단 결제금액 = ② 카드로 결제와 항상 동일
   if (rp >= rpForStep1) {
     cardResultEl.style.background = '#f0faff';
     cardResultEl.style.color      = 'var(--ocean)';
-    cardResultEl.innerHTML        = '💳 카드 결제금액: <span style="font-size:16px;">' + fmt(remaining) + '</span>';
+    cardResultEl.style.fontSize   = '14px';
+    cardResultEl.textContent      = '💳 카드 결제금액: ' + fmt(cardRemaining);
   } else {
+    // RP 부족 시 실제 카드 결제금액 표시
     cardResultEl.style.background = '#fff5f5';
     cardResultEl.style.color      = 'var(--coral)';
-    cardResultEl.innerHTML        = '⚠️ 리워드가 부족해 카드 결제 비중이 늘어납니다';
+    cardResultEl.style.fontSize   = '13px';
+    cardResultEl.textContent      = '💳 카드 결제금액: ' + fmt(cardRemaining) + ' (리워드 부족)';
   }
 }
 </script>
