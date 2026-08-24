@@ -609,7 +609,7 @@ const CONTACT = {
       <!-- 유튜브 고화질 썸네일 -->
       <img id="yt-thumb"
         src="https://img.youtube.com/vi/cYJvkeSffoo/maxresdefault.jpg"
-        onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://img.youtube.com/vi/cYJvkeSffoo/hqdefault.jpg';}else{this.onerror=null;this.src='img/hero-ship.jpg';}"
+        onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://img.youtube.com/vi/cYJvkeSffoo/hqdefault.jpg';}else{this.onerror=null;this.src='hero-ship.jpg';}"
         alt="크루즈 여행 소개 영상"
         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
       <!-- 재생 버튼 오버레이 -->
@@ -630,12 +630,16 @@ const CONTACT = {
   </div>
 
   <!-- 0원 직구 핵심 배너 -->
-  <div style="background:linear-gradient(135deg,var(--navy) 0%,#0a4a7a 100%); border-radius:0 0 var(--r) var(--r); padding:28px 24px 32px; text-align:center; margin-bottom:16px;">
-    <div style="display:inline-block; background:var(--gold); color:var(--navy); font-size:11px; font-weight:900; letter-spacing:2px; padding:5px 14px; border-radius:20px; margin-bottom:14px;">크루즈 구독 플랫폼</div>
-    <div style="font-size:3.8rem; font-weight:900; color:var(--gold); line-height:1.1; margin-bottom:8px;">0원</div>
-    <div style="font-size:1.3rem; font-weight:900; color:#fff; margin-bottom:10px;">리워드 100% 전액 결제</div>
-    <div style="font-size:14px; color:rgba(255,255,255,.75); line-height:1.7;">
-      쌓인 리워드 포인트로<br>크루즈 객실비 <strong style="color:var(--gold);">전액 결제</strong> 가능
+  <div style="background:linear-gradient(135deg,var(--navy) 0%,#0a4a7a 100%); border-radius:0 0 var(--r) var(--r); padding:28px 24px 30px; text-align:center; margin-bottom:16px;">
+    <div style="display:inline-block; background:var(--gold); color:var(--navy); font-size:11px; font-weight:900; letter-spacing:2px; padding:5px 14px; border-radius:20px; margin-bottom:16px;">실제 예약 사례</div>
+    <div style="font-size:15px; color:rgba(255,255,255,.8); margin-bottom:4px;">부모님 하와이 크루즈</div>
+    <div style="font-size:2.1rem; font-weight:900; color:var(--gold); line-height:1.25; margin-bottom:14px;">리워드로 예약 완료</div>
+    <div style="font-size:13.5px; color:rgba(255,255,255,.75); line-height:1.85;">
+      2027년 7월 10일 출발 · 7박 하와이<br>
+      Norwegian Cruise Line · Pride of America
+    </div>
+    <div style="font-size:11.5px; color:rgba(255,255,255,.45); margin-top:12px; line-height:1.7;">
+      객실비 전액을 리워드로 결제했습니다 · 선상 팁은 별도
     </div>
   </div>
 
@@ -652,7 +656,7 @@ const CONTACT = {
 <div style="text-align:center; padding:32px 8px 24px; word-break:keep-all;">
   <!-- 배 이모지 -->
   <div style="border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow-lg); margin-bottom:26px;">
-    <img src="img/balcony-wide.jpg" alt="크루즈 발코니에서 바라본 바다"
+    <img src="balcony-wide.jpg" alt="크루즈 발코니에서 바라본 바다"
          style="width:100%; display:block;">
   </div>
 
@@ -701,7 +705,7 @@ const CONTACT = {
     </div>
   </div>
   <div style="border-radius:12px; overflow:hidden; height:150px;">
-    <img src="img/hero-ship.jpg"
+    <img src="hero-ship.jpg"
       alt="글로벌 크루즈 네트워크"
       style="width:100%; height:100%; object-fit:cover; display:block;">
   </div>
@@ -779,11 +783,32 @@ const CONTACT = {
     <span class="tx">믿을 수 있는 이유</span>
     <span class="ar">›</span>
   </button>
-  <button class="topic-btn gold" onclick="openTopic('contact')">
-    <span class="ic">💬</span>
-    <span class="tx">문의하기</span>
-    <span class="ar">›</span>
-  </button>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     💬 문의 카드 — 연락처는 아래 링크 두 곳만 고치면 됩니다
+══════════════════════════════════════════════════ -->
+<div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:var(--r); padding:28px 22px 24px; text-align:center; position:relative; overflow:hidden; margin:30px 0 14px;">
+  <div style="position:absolute; top:-10px; right:-10px; font-size:94px; opacity:.06;">🛳️</div>
+  <div style="display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.9); font-size:11px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px; margin-bottom:14px;">내 여행 스타일에 맞는지 궁금하다면</div>
+  <h2 style="font-size:20px; font-weight:900; color:#fff; margin-bottom:8px; line-height:1.4; word-break:keep-all;">가볍게 물어봐도 괜찮아요 😊</h2>
+  <p style="font-size:13px; color:rgba(255,255,255,.75); line-height:1.7; margin-bottom:20px;">크루즈 멤버십이 나에게 맞는지<br>부담 없이 문의해보세요</p>
+
+  <a href="https://open.kakao.com/o/sbJudavg" target="_blank"
+     style="display:flex; align-items:center; gap:13px; background:linear-gradient(135deg,#f6c500,#ffe066); color:#3c1e1e; text-decoration:none; border-radius:14px; padding:15px 18px; margin-bottom:10px; text-align:left;">
+    <span style="font-size:20px; flex-shrink:0;">💬</span>
+    <span style="flex:1;"><span style="display:block; font-size:14.5px; font-weight:900;">카카오 오픈채팅</span>
+    <span style="display:block; font-size:11px; color:rgba(0,0,0,.5); margin-top:2px;">가장 빠른 상담</span></span>
+    <span style="font-size:16px;">→</span>
+  </a>
+
+  <a href="https://band.us/n/a5acA8m6v7jc5" target="_blank"
+     style="display:flex; align-items:center; gap:13px; background:linear-gradient(135deg,#1a9e3f,#2ecc71); color:#fff; text-decoration:none; border-radius:14px; padding:15px 18px; text-align:left;">
+    <span style="font-size:20px; flex-shrink:0;">🛳️</span>
+    <span style="flex:1;"><span style="display:block; font-size:14.5px; font-weight:900;">크루즈클럽 밴드</span>
+    <span style="display:block; font-size:11px; color:rgba(255,255,255,.68); margin-top:2px;">멤버 커뮤니티</span></span>
+    <span style="font-size:16px;">→</span>
+  </a>
 </div>
 
 <div style="background:rgba(255,255,255,.6); border:1px solid var(--border); border-radius:var(--rs); padding:16px 18px; font-size:11px; color:var(--muted); line-height:1.9; text-align:center; margin-top:10px;">
@@ -830,7 +855,7 @@ const CONTACT = {
 
   <!-- 메인 큰 사진 -->
   <div style="border-radius:16px; overflow:hidden; margin-bottom:8px; box-shadow:var(--shadow);">
-    <img src="img/port-ship-wide.jpg"
+    <img src="port-ship-wide.jpg"
       alt="크루즈 선상 풍경"
       style="width:100%; height:200px; object-fit:cover; display:block;">
     <div style="background:var(--white); padding:10px 14px; border:1px solid var(--border); border-top:none; border-radius:0 0 16px 16px;">
@@ -879,7 +904,7 @@ const CONTACT = {
     <div class="tl">✨ 왜 크루즈 여행인가요?</div>
   </div>
 <div style="border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow); margin-bottom:16px;">
-  <img src="img/sunset-sea-wide.jpg" alt="바다 위에서 맞는 일몰" loading="lazy" style="width:100%; display:block;">
+  <img src="sunset-sea-wide.jpg" alt="바다 위에서 맞는 일몰" loading="lazy" style="width:100%; display:block;">
 </div>
 <div class="card" style="word-break:keep-all;">
   <div style="font-size:14px; font-weight:700; color:var(--muted); margin-bottom:14px;">일반 해외여행은 이렇습니다</div>
@@ -1773,6 +1798,27 @@ function simCalc() {
     <button class="bk" onclick="backToMenu()">‹ 목록</button>
     <div class="tl">✍️ 실제 예약 후기</div>
   </div>
+
+<div class="card" style="word-break:keep-all;">
+  <div style="font-size:11px; font-weight:800; letter-spacing:1.5px; color:var(--gold); margin-bottom:6px;">REAL BOOKING</div>
+  <div style="font-size:15.5px; font-weight:900; color:var(--navy); margin-bottom:5px;">부모님 하와이 크루즈 예약 영수증</div>
+  <div style="font-size:12px; color:var(--muted); line-height:1.7; margin-bottom:14px;">2027년 7월 출발 · Norwegian Cruise Line · Pride of America</div>
+
+  <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:10px;">
+    <img src="receipt-hawaii.jpg" alt="하와이 크루즈 예약 영수증" loading="lazy" style="width:100%; display:block;">
+  </div>
+  <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:14px;">
+    <img src="receipt-hawaii-itinerary.jpg" alt="하와이 크루즈 9일 기항지 여정" loading="lazy" style="width:100%; display:block;">
+  </div>
+
+  <div style="background:var(--sky); border-radius:12px; padding:14px 16px; font-size:12.5px; color:var(--navy); line-height:1.9;">
+    객실가 <strong>$6,634.42</strong> + 세금 <strong>$400</strong> = <strong>$7,034.42</strong><br>
+    전액을 리워드 <strong>7,034.42 포인트</strong>로 결제했습니다.<br>
+    <span style="color:var(--ocean); font-weight:800;">총 실지출금액 $0.00</span>
+    <span style="display:block; font-size:11px; color:var(--muted); margin-top:6px;">※ 선상 팁은 리워드로 결제되지 않으며 별도입니다.<br>※ 개인정보와 예약번호는 가렸습니다.</span>
+  </div>
+</div>
+
 <div class="card" style="padding:16px 14px;">
 
   <div style="font-size:12px; color:var(--muted); margin-bottom:14px; line-height:1.6; text-align:center;">
@@ -1934,7 +1980,7 @@ function simCalc() {
     <div class="tl">🛏️ 객실은 어떻게 선택하나요?</div>
   </div>
 <div style="border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow); margin-bottom:16px;">
-  <img src="img/balcony.jpg" alt="발코니 객실에서 보는 바다" loading="lazy" style="width:100%; display:block;">
+  <img src="balcony.jpg" alt="발코니 객실에서 보는 바다" loading="lazy" style="width:100%; display:block;">
 </div>
 <div class="card" style="word-break:keep-all;">
   <div style="font-size:13px; color:var(--muted); margin-bottom:14px;">원하는 타입을 직접 선택할 수 있어요</div>
@@ -2222,26 +2268,6 @@ function simCalc() {
   <button class="topic-foot" onclick="backToMenu()">‹ 주제 목록으로 돌아가기</button>
 </section>
 
-<section class="topic" id="tp-contact" style="display:none;">
-  <div class="topic-bar">
-    <button class="bk" onclick="backToMenu()">‹ 목록</button>
-    <div class="tl">💬 문의하기</div>
-  </div>
-<div style="background:linear-gradient(135deg,var(--navy),var(--ocean)); border-radius:var(--r); padding:30px 24px 26px; text-align:center; position:relative; overflow:hidden; margin-bottom:14px;">
-  <div style="position:absolute; top:-10px; right:-10px; font-size:94px; opacity:.06;">🛳️</div>
-  <div style="display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); color:rgba(255,255,255,.9); font-size:11px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px; margin-bottom:14px;">내 여행 스타일에 맞는지 궁금하다면</div>
-  <h2 style="font-size:20px; font-weight:900; color:#fff; margin-bottom:8px; line-height:1.4; word-break:keep-all;">가볍게 물어봐도 괜찮아요 😊</h2>
-  <p style="font-size:13px; color:rgba(255,255,255,.75); line-height:1.7;">크루즈 멤버십이 나에게 맞는지<br>부담 없이 문의해보세요</p>
-</div>
-
-<div class="card" style="word-break:keep-all;">
-  <div style="font-size:13px; font-weight:900; color:var(--navy); margin-bottom:4px;">📮 연락처</div>
-  <div id="ct-owner" style="font-size:12px; color:var(--muted); margin-bottom:14px; line-height:1.7;"></div>
-  <div id="ct-links"></div>
-</div>
-  <button class="topic-foot" onclick="backToMenu()">‹ 주제 목록으로 돌아가기</button>
-</section>
-
 </div><!-- end screen-topic -->
 
 </div><!-- .wrap -->
@@ -2389,9 +2415,19 @@ window.onload=function(){
 var _menuScroll = 0;
 var _inPage = false;   // 이 페이지 안에서 이동했는지 (직접 링크 진입 구분)
 
+/* 부드러운 스크롤을 잠시 끄고 즉시 이동 */
+function jump(y){
+  var el = document.documentElement;
+  var prev = el.style.scrollBehavior;
+  el.style.scrollBehavior = 'auto';
+  window.scrollTo(0, y);
+  el.style.scrollBehavior = prev;
+}
+
 function openTopic(id){
   _menuScroll = window.scrollY;
   _inPage = true;
+  jump(0);
   if((location.hash || '').replace('#','') === id){ renderScreen(); }
   else { location.hash = id; }
 }
@@ -2411,56 +2447,21 @@ function renderScreen(){
   document.querySelectorAll('.topic').forEach(function(t){ t.style.display = 'none'; });
 
   if(el){
+    jump(0);
     menu.style.display = 'none';
     stage.style.display = 'block';
     el.style.display = 'block';
-    window.scrollTo(0, 0);
+    jump(0);
   } else {
     stage.style.display = 'none';
     menu.style.display = 'block';
-    window.scrollTo(0, _menuScroll);
+    jump(_menuScroll);
     _menuScroll = 0;
   }
 }
 window.addEventListener('hashchange', renderScreen);
 
-/* ═══════════ 문의 연락처 자동 생성 ═══════════ */
-function renderContact(){
-  var owner = document.getElementById('ct-owner');
-  if(owner){
-    var t = [];
-    if(CONTACT.name)  t.push('<strong style="color:var(--navy);">' + CONTACT.name + '</strong>');
-    if(CONTACT.title) t.push(CONTACT.title);
-    owner.innerHTML = t.join(' · ') || '편하게 연락 주세요';
-  }
-  var box = document.getElementById('ct-links');
-  if(!box) return;
-
-  var items = [];
-  if(CONTACT.kakao)
-    items.push(['https://open.kakao.com', CONTACT.kakao, '💬', '카카오 오픈채팅', '가장 빠른 상담', 'linear-gradient(135deg,#f6c500,#ffe066)', '#3c1e1e']);
-  if(CONTACT.band)
-    items.push(['band.us', CONTACT.band, '🛳️', '크루즈클럽 밴드', '멤버 커뮤니티', 'linear-gradient(135deg,#1a9e3f,#2ecc71)', '#fff']);
-  if(CONTACT.phone)
-    items.push([CONTACT.phone, 'tel:' + CONTACT.phone.replace(/[^0-9+]/g,''), '📞', '전화 문의', CONTACT.phone, 'linear-gradient(135deg,var(--navy),var(--ocean))', '#fff']);
-  if(CONTACT.instagram)
-    items.push(['instagram', CONTACT.instagram, '📷', '인스타그램', '여행 기록 보기', 'linear-gradient(135deg,#c13584,#f56040)', '#fff']);
-  if(CONTACT.email)
-    items.push([CONTACT.email, 'mailto:' + CONTACT.email, '✉️', '이메일 문의', CONTACT.email, 'linear-gradient(135deg,#4a5f78,#7b8fa8)', '#fff']);
-
-  box.innerHTML = items.map(function(o){
-    var dark = (o[6] === '#fff');
-    return '<a class="ct-card" href="' + o[1] + '" target="_blank" ' +
-           'style="background:' + o[5] + '; color:' + o[6] + ';">' +
-           '<span style="font-size:20px; flex-shrink:0;">' + o[2] + '</span>' +
-           '<div style="flex:1;"><div class="cn">' + o[3] + '</div>' +
-           '<div class="cs" style="color:' + (dark ? 'rgba(255,255,255,.68)' : 'rgba(0,0,0,.5)') + ';">' + o[4] + '</div></div>' +
-           '<span style="font-size:16px;">→</span></a>';
-  }).join('');
-}
-
 document.addEventListener('DOMContentLoaded', function(){
-  renderContact();
   renderScreen();
 });
 </script>
